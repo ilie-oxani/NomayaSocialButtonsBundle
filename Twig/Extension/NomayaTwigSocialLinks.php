@@ -23,7 +23,10 @@ THE SOFTWARE.
 
 namespace Nomaya\SocialBundle\Twig\Extension;
 
-class NomayaTwigSocialLinks extends \Twig_Extension{
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
+
+class NomayaTwigSocialLinks extends AbstractExtension {
 
     protected $container;
 
@@ -45,8 +48,8 @@ class NomayaTwigSocialLinks extends \Twig_Extension{
     public function getFunctions()
     {
       return array(
-        'socialLinks'     => new \Twig_Function_Method($this, 'getSocialLinks' ,array('is_safe' => array('html'))),
-        'socialLink'     => new \Twig_Function_Method($this, 'getSocialLink' ,array('is_safe' => array('html')))
+        'socialLinks'     => new TwigFunction($this, 'getSocialLinks' ,array('is_safe' => array('html'))),
+        'socialLink'     => new TwigFunction($this, 'getSocialLink' ,array('is_safe' => array('html')))
       );
     }
 
