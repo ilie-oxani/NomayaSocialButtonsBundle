@@ -46,11 +46,11 @@ class NomayaTwigSocialLinks extends AbstractExtension {
     }
     
     public function getFunctions()
-    {
-      return array(
-        'socialLinks'     => new TwigFunction($this, 'getSocialLinks' ,array('is_safe' => array('html'))),
-        'socialLink'     => new TwigFunction($this, 'getSocialLink' ,array('is_safe' => array('html')))
-      );
+    {   
+        return [
+            new TwigFunction('socialLinks', [$this, 'getSocialLinks'], ['is_safe' => ['html']]),
+            new TwigFunction('socialLink', [$this, 'getSocialLink'], ['is_safe' => ['html']]),
+        ];
     }
 
     public function getSocialLinks($parameters = array())
