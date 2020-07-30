@@ -64,6 +64,8 @@ add to your config.yml file the parameters:
 // app/config/config.yml
 
 ``` yaml
+
+
 //...
 nomaya_social:
     buttons:
@@ -77,7 +79,7 @@ nomaya_social:
         twitter:
             url:            null
             locale:         "fr"
-            message:        "Je veux partager ça avec vous"
+            message:        "Je veux partager Ã§a avec vous"
             text:           "Tweet"
             via:            "L'Equipe cartedevisitevirtuelle.fr"
             tag:            "ttot"
